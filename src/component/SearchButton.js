@@ -40,7 +40,7 @@ const SearchButton = (props) => {
         <div style={{margin:"0px 20px", marginTop:"20px"}}>
             <p>TRENDING</p>
             {items.map((item)=>
-                <div style={{display:"flex", flexDirection: "row"}}>
+                <div style={{display:"flex", flexDirection: "row"}} key={item.key}>
                     <FaSearch style={{marginTop:"2px"}}/>
                     <p style={{marginLeft:"20px"}}>{item.name}</p>
                 </div>
