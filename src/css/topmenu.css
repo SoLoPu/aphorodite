@@ -1,0 +1,33 @@
+.topmenu {
+    background-color: black;
+    transition: 0.3s;
+}
+
+.brand {
+    color: whitesmoke;
+}
+
+.link{
+    color: whitesmoke;
+}
+
+
+.link:hover {
+    color: dimgrey;
+}
+
+.phone {
+    color: whitesmoke;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.authentication {
+    display: flex;
+
+}

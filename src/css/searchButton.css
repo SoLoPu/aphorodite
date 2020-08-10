@@ -1,0 +1,32 @@
+
+.icon-search {
+    color:white;
+    width: 25pt;
+    height: 25pt;
+    border: solid 1.5pt white;
+    border-radius: 12.5pt;
+    padding: 5pt;
+
+    
+}
+
+.search-button {
+    background-color: black;
+}
+
+.search-input {
+    width: 500px;
+    border:none
+}
+.search-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-search-input {
+    margin: 20px;
+}
+
+.search-input:focus {
+    outline: none;
+}

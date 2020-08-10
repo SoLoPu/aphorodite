@@ -1,0 +1,25 @@
+.carouselContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselTitle {
+    margin-top: -700px;
+    font-size: 70px;
+    color: whitesmoke;
+}
+
+.carouselButton {
+    background-color: black;
+    border: none;
+    color: rgb(189, 189, 189);  
+    padding: 10px 50px;
+    margin-top: 25px
+}
+
+.carouselButton:hover {
+    background-color: gray;
+}
+
