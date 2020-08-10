@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,38 +14,96 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Shop from './pages/Shop';
 import Blog from './pages/Blog';
+import TopMenu from './component/TopMenu';
 
 
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        
+class App extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      opacity: 0.2,
+      isTop: true
+    };
 
+    this.checkTop = this.checkTop.bind(this);
+    this.MenuMouseEnter = this.MenuMouseEnter.bind(this);
+    this.MenuMouseLeave = this.MenuMouseLeave.bind(this);
+  }
 
+  checkTop(){
+    if(window.pageYOffset === 0) {
+      this.setState({
+        ...this.state,
+        opacity: 0.2,
+        isTop: true
+      })
 
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/shop">
-            <Shop />
-          </Route>
-          <Route path="/blog">
-            <Blog />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+    }
+    else {
+      this.setState({
+        ...this.state,
+        opacity: 1,
+        isTop: false
+      })
+    }
+  }
 
+  MenuMouseEnter(){
+    if(this.state.isTop){
+      this.setState({
+        ...this.state,
+        opacity: 1
+      })
+    }
+  }
+  MenuMouseLeave(){
+    if(this.state.isTop){
+      this.setState({
+        ...this.state,
+        opacity: 0.2
+      })
+    }
+  }
+  
+  render(){
+    return (
+      <Router>
+        <div className="App">
+        <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave}/>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/blog">
+              <Blog />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+  
+  
+        <Footer />
+          
+        </div>
+      </Router>
+    );
 
-      <Footer />
-        
-      </div>
-    </Router>
-  );
+  }
+
+  componentDidMount() {
+    window.onscroll = ()=>this.checkTop()
+  }
+  
+  componentWillUnmount() {
+    window.onscroll = null;
+  }
+  
 }
 
 export default App;

@@ -9,8 +9,7 @@ import Blog from '../component/Blog';
 export default class Home extends Component {
 
   constructor(props) {
-    super(props)
-  
+    super(props)      
     this.state = {
       items: [
         {
@@ -34,56 +33,19 @@ export default class Home extends Component {
           header: 'Street',
           key: '3'
         }
-      ],
-      opacity: 0.2,
-      isTop: true
+      ]
+      
     };
 
-    this.checkTop = this.checkTop.bind(this);
-    this.MenuMouseEnter = this.MenuMouseEnter.bind(this);
-    this.MenuMouseLeave = this.MenuMouseLeave.bind(this);
+   
   }
 
-  checkTop(){
-    if(window.pageYOffset === 0) {
-      this.setState({
-        ...this.state,
-        opacity: 0.2,
-        isTop: true
-      })
-
-    }
-    else {
-      this.setState({
-        ...this.state,
-        opacity: 1,
-        isTop: false
-      })
-    }
-  }
-
-  MenuMouseEnter(){
-    if(this.state.isTop){
-      this.setState({
-        ...this.state,
-        opacity: 1
-      })
-    }
-  }
-  MenuMouseLeave(){
-    if(this.state.isTop){
-      this.setState({
-        ...this.state,
-        opacity: 0.2
-      })
-    }
-  }
+  
   
     
     render(){
         return(
             <div className="Home">
-                <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave}/>
                 <div className="homeBody">
                 <Carousel items={this.state.items}/>
                 <div className="best-selling">
@@ -98,10 +60,10 @@ export default class Home extends Component {
 
     
     componentDidMount() {
-      window.onscroll = ()=>this.checkTop()
+
     }
     
     componentWillUnmount() {
-      window.onscroll = null;
+
     }
 }
