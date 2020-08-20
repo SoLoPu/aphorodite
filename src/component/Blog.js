@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import React from 'react';
+import { Container, Col, Row, Button } from 'reactstrap';
 
 import '../css/blog.css';
 
 
 
-export default class Blog extends Component {
-    render(){
+const Blog = () => {
         return(
             <Container className="Blog" fluid="true">
                 <div className="blog-title">
@@ -62,13 +61,16 @@ export default class Blog extends Component {
                 
                 
                 </Row>
+
+
+                
                 
      
 
             </Container>
         )
-    }
 }
+
 
 
 const BlogItem = (props) => {
@@ -80,3 +82,5 @@ const BlogItem = (props) => {
         </div>
     )
 }
+
+export default Blog;

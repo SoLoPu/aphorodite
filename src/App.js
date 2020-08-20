@@ -15,6 +15,9 @@ import About from './pages/About';
 import Shop from './pages/Shop';
 import Blog from './pages/Blog';
 import TopMenu from './component/TopMenu';
+import Collection from './pages/Collection';
+import SearchResult from './pages/SearchResult';
+import Detail from './pages/Detail';
 
 
 
@@ -71,8 +74,17 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave}/>
+        <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave} props={this.props}/>
           <Switch>
+            <Route path="/collection">
+              <Collection />
+            </Route>
+            <Route path="/detail/:id">
+              <Detail />
+            </Route>
+            <Route path="/search">
+              <SearchResult />
+            </Route>
             <Route path="/about">
               <About />
             </Route>

@@ -1,0 +1,39 @@
+.link-hover{
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    display: flex;
+    z-index: 100;
+
+}
+
+.link-no-hover{
+    position: static;
+    background-color: #E7E7E7;
+    color: black;
+    z-index: 1;
+    transition:all 0.5s ease-in-out;
+    -webkit-transition:all 0.5s ease-in-out;
+}
+
+.wrapper{
+    display: flex;
+    position: relative; 
+    
+}
+
+
+.name {
+    color: black;
+}
+
+.price {
+    color: gray;
+}
+
+
+img {
+    width: 333px;
+    height: 400px;
+}

@@ -3,7 +3,6 @@ import '../css/home.css'
 
 import Carousel from '../component/Carousel'
 import BestProduct from '../component/BestProduct';
-import TopMenu from '../component/TopMenu';
 import Blog from '../component/Blog';
 
 export default class Home extends Component {
@@ -39,10 +38,7 @@ export default class Home extends Component {
 
    
   }
-
   
-  
-    
     render(){
         return(
             <div className="Home">

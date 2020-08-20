@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import { ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
 import { FaSearch } from 'react-icons/fa';
+import { useHistory } from "react-router-dom";
 
-import '../css/searchButton.css'
+import '../css/searchButton.css';
+
+
 
 const SearchButton = (props) => {
   const [dropdownOpen, setOpen] = useState(false);
 
   const toggle = () => setOpen(!dropdownOpen);
+
+  const history = useHistory();
 
 
   const items = [
@@ -24,7 +29,14 @@ const SearchButton = (props) => {
         key:"3"
       }
       
-  ]
+  ];
+
+  
+  const _handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      history.push(`/search?key=${e.target.value}`);
+    }
+  }
 
   return (
     <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -34,7 +46,7 @@ const SearchButton = (props) => {
       <DropdownMenu>
         <div className="search-container">
             <FaSearch className="icon-search-input"/>
-            <input type="text" className="search-input" placeholder="Nhap vao de tim kiem"/>
+            <input type="text" className="search-input" placeholder="Nhap vao de tim kiem" onKeyPress={_handleKeyDown}/>
         </div>
         <div style={{borderBottom: "1px solid black", margin: "0px 20px"}}></div>
         <div style={{margin:"0px 20px", marginTop:"20px"}}>

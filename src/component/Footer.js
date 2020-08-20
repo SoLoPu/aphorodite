@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa";
 
 import "../css/footer.css"
 
-const Example = (props) => {
+const Footer = (props) => {
   return (
     
       <Container className="footer" fluid="true">
@@ -43,4 +43,4 @@ const Example = (props) => {
   );
 }
 
-export default Example;
+export default Footer;
