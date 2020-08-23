@@ -40,4 +40,22 @@
       font-weight: 900;
       font-size: 1rem; }
       ul.pagination a.page-link:hover {
-        background-color: #f4f4f4; }
+        background-color: #f4f4f4; 
+      }
+
+.btn-search-filter {
+
+  background-color: black;
+  border: none;
+  color: rgb(189, 189, 189);  
+  padding: 10px 50px;
+  margin-top: 25px;
+  margin-right: 10px;
+
+}
+
+.story-title{
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}

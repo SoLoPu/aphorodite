@@ -1,0 +1,39 @@
+.detail-info {
+
+}
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.detail-pattern p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.detail-color div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.detail-size div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}

@@ -33,7 +33,32 @@
 }
 
 
-img {
+.item-img {
     width: 333px;
     height: 400px;
+}
+
+.collection-banner-img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+.collection-banner {
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.collection-banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: white;
 }

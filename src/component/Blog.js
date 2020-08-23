@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Col, Row, Button } from 'reactstrap';
+import { Container, Col, Row } from 'reactstrap';
 
 import '../css/blog.css';
 

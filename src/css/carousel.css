@@ -1,17 +1,22 @@
 .carouselContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .carouselTitle {
-    margin-top: -700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 70px;
     color: whitesmoke;
 }
 
 .carouselButton {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     background-color: black;
     border: none;
     color: rgb(189, 189, 189);  
@@ -23,3 +28,19 @@
     background-color: gray;
 }
 
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.detail-name {
+    padding: 20px 50px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}

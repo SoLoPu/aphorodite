@@ -18,7 +18,7 @@ const SearchItem = (props) => {
                                         setHover(!hover);
                                     }}
                                     >
-                                        <img src={product.src1} alt=""/>
+                                        <img className="item-img" src={product.src1} alt=""/>
                 </Link>
             </div>
         )
@@ -34,7 +34,7 @@ const SearchItem = (props) => {
                                     }}
                                     >
                                         
-                                        <img src={product.src2} alt=""/>
+                                        <img className="item-img" src={product.src2} alt=""/>
                                         <p className="name">{product.name}</p>
                                         <p className="price">{product.price}</p>
                 </Link>
