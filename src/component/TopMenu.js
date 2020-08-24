@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, NavItem, NavbarBrand, Container } from 'reactstrap';
 import { Link } from "react-router-dom";
+import { FaShoppingCart } from "react-icons/fa"
 
 
 import '../css/topmenu.css';
@@ -26,7 +27,9 @@ const TopMenu = (props) =>  {
                 </div> */}
 
                 <Navbar fixed={fixed} style={{ backgroundColor: "black", opacity: props.opacity }} onMouseEnter={props.MouseEnter} onMouseLeave={props.MouseLeave}>
-                    <NavbarBrand className="brand">APHRODITE</NavbarBrand>
+                    <NavbarBrand className="brand">
+                        <Link to="/" className="link nav-link">APHRODITE</Link>
+                    </NavbarBrand>
                     <Nav className="mr-auto">
                         <NavItem>
                         <Link to="/" className="link nav-link">Trang chu</Link>
@@ -48,6 +51,11 @@ const TopMenu = (props) =>  {
                         </NavItem>
                         <NavItem>
                             <Link to="/signup" className="link nav-link">Dang ki</Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/cart" className="link nav-link">
+                                <FaShoppingCart className="icon-cart"/>
+                            </Link>
                         </NavItem>
                         <NavItem>      
                             <SearchButton props={props}/>

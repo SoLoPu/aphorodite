@@ -18,6 +18,7 @@ import TopMenu from './component/TopMenu';
 import Collection from './pages/Collection';
 import SearchResult from './pages/SearchResult';
 import Detail from './pages/Detail';
+import Cart from './pages/Cart';
 
 
 
@@ -76,6 +77,9 @@ class App extends Component {
         <div className="App">
         <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave} props={this.props}/>
           <Switch>
+            <Route path="/cart">
+              <Cart />
+            </Route>
             <Route path="/collection">
               <Collection />
             </Route>

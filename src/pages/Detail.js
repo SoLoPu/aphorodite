@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from "react-router";
 import { Container, Row, Col } from 'reactstrap';
 import '../css/detail.css'
@@ -7,9 +7,6 @@ import CarouselDetail from '../component/CarouselDetail'
 
 import database from '../database/data.json';
 import SearchItem from '../component/SearchItem';
-import SearchResult from './SearchResult';
-
-
 
 
 const Detail = () => {
@@ -27,14 +24,41 @@ const Detail = () => {
             },
             {
                 key:"3",
-                src1: "media.gucci.com/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg",
+                src1: "media.gucci.cclassnamsom/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg",
                 src2: "media.gucci.com/style/DarkGray_Center_0_0_490x490/1594744211/636709_10O0G_1000_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg"
                 
             }
         ]
+        const [size, setSize] = useState("S");
+        const [color, setColor] = useState(0);
+        const [number, setNumber] = useState(1);
 
         const samedata = database.slice(0,4);
         let { id } = useParams();
+
+        const selectS = (e) => {
+            setSize("S");
+        }
+
+        const selectM = (e) => {
+            setSize("M");
+        }
+
+        const selectL = (e) => {
+            setSize("L");
+        }
+
+
+        const plusNumber = () => {
+            setNumber(number+1);
+        }
+        
+        const minusNumber = () => {
+            if(number>1)
+            {
+                setNumber(number-1);
+            }
+        }
         return(
             <div className="Detail">
             <Container fluid={true}>
@@ -74,22 +98,21 @@ const Detail = () => {
 
                     <div className="selection detail-color">
                        
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div style={{backgroundColor: color==="S"?"grey":"black" }}></div>
+                        <div style={{backgroundColor: color==="S"?"grey":"red" }}></div>
+                        <div style={{backgroundColor: color==="S"?"grey":"white" }}></div>
                     </div>
 
-                    <div className="selection detail-size">
-                        
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
+                    <div className="selection">
+                        <button className="detail-size" onClick={selectS} style={{backgroundColor: size==="S"?"grey":"white" }}>S</button>
+                        <button className="detail-size" onClick={selectM} style={{backgroundColor: size==="M"?"grey":"white" }}>M</button>
+                        <button className="detail-size" onClick={selectL} style={{backgroundColor: size==="L"?"grey":"white" }}>L</button>
                     </div>
 
                     <div className="detail-number">
-                        <button className="detail-number-operator-plus">-</button>
-                        <div className="detail-number-main">2</div>
-                        <button className="detail-number-operator-minus">+</button>
+                        <button className="detail-number-operator-plus" onClick={minusNumber}>-</button>
+                        <div className="detail-number-main">{number}</div>
+                        <button className="detail-number-operator-minus" onClick={plusNumber}>+</button>
                     </div>
 
 

@@ -1,0 +1,57 @@
+.card-info {
+    background-color: white;
+}
+
+.card-info h1 {
+    padding-top: 40px;
+    padding-left: 20px;
+    color:grey
+}
+
+.cross {
+    height: 1px;
+    background-color: grey;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.cart-info-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    
+}
+
+.cart-info-form {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cart-info-sub-detail {
+    color: grey;
+}
+
+.cart-checkout-button {
+    border: 0;
+    color: white;
+    background-color: black;
+    padding: 20px 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-checkout-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-sum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 25px;
+}
