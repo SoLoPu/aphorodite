@@ -69,11 +69,6 @@ const  SearchResult = () => {
             </Container>
 
             <Container className="SearchResult" fluid="true" style={{paddingLeft: "200px", paddingRight: "200px"}}>
-            
-
-            
-
-
             <Row >
                 
                     {currentProducts.map((product, index)=>

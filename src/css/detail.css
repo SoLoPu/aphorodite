@@ -16,6 +16,7 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
+    margin-bottom: 0;
 }
 
 .detail-color div {
@@ -36,4 +37,122 @@
     width: 50px;
     height: 50px;
     border-radius: 25px;
+}
+
+.detail-filter {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.detail-filter h3{
+
+    font-size: 30px;
+}
+
+.selection {
+    margin-top: 20px;
+
+}
+
+.detail-desciption-title {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.detail-desciption {
+
+}
+
+.detail-size {
+
+}
+
+.detail-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+
+}
+
+.detail-number-operator-plus {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius:  10px 0px 0px 10px;
+    background-color: white;
+
+}
+
+
+.detail-number-operator-minus {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius:  0px 10px 10px 0px;
+    background-color: white;
+
+}
+
+.detail-number-main {
+    display: flex;
+    width: 100px;
+    border: 1px solid black;    
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-add-to-card {
+    display: flex;
+    justify-content: center;
+}
+
+.button-card {
+    border: 0;
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    padding: 10px
+}
+
+
+.detail-number-operator-minus:focus {
+    outline: 0;
+}
+.detail-number-operator-minus:active {
+    background-color:gray;
+}
+
+
+
+.detail-number-operator-plus:focus {
+    outline: 0;
+}
+.detail-number-operator-plus:active {
+    background-color:gray;
+}
+
+.button-card:hover {
+    background-color: grey;
+}
+
+
+.button-card:focus {
+    outline: 0;
 }

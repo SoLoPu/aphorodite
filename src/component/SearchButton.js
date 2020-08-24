@@ -35,6 +35,7 @@ const SearchButton = (props) => {
   const _handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       history.push(`/search?key=${e.target.value}`);
+      e.target.blur();
     }
   }
 
