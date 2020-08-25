@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { connect } from 'react-redux';
+import * as actions from '../actions'
 
 import '../css/cart.css';
 
@@ -11,7 +13,9 @@ import SearchItem from '../component/SearchItem';
 
 
 
-const Cart = () => {
+
+
+const Cart = (props) => {
     const samedata = database.slice(0,4);
 
     const cart = [
@@ -36,7 +40,7 @@ const Cart = () => {
     ]
 
 
-    if(cart.length !== 0)
+    if(props.cart.length !== 0)
     {
         return(
             <div className="cart-wrapper">
@@ -50,7 +54,7 @@ const Cart = () => {
                         <Col md="5">
                         <h3 style={{color:"grey"}}>Gio hang</h3>
                             {
-                                cart.map((item)=>
+                                props.cart.map((item)=>
                                     <CartItem item={item} />
                                 )
                             }
@@ -137,4 +141,8 @@ const Cart = () => {
     }
 }
 
-export default Cart;
+const mapStateToProps = state => ({
+    cart: state.cart
+})
+
+export default connect(mapStateToProps,actions)(Cart);

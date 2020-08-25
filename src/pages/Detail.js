@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import { useParams } from "react-router";
 import { Container, Row, Col } from 'reactstrap';
-import '../css/detail.css'
+import { connect } from 'react-redux';
+import * as actions from '../actions'
+
+
+import '../css/detail.css';
 
 import CarouselDetail from '../component/CarouselDetail'
 
@@ -9,7 +13,9 @@ import database from '../database/data.json';
 import SearchItem from '../component/SearchItem';
 
 
-const Detail = () => {
+
+
+const Detail = (props) => {
         const items = [
             {
                 key:"1",
@@ -30,7 +36,7 @@ const Detail = () => {
             }
         ]
         const [size, setSize] = useState("S");
-        const [color, setColor] = useState(0);
+        const [color, setColor] = useState("blue");
         const [number, setNumber] = useState(1);
 
         const samedata = database.slice(0,4);
@@ -59,6 +65,9 @@ const Detail = () => {
                 setNumber(number-1);
             }
         }
+
+
+
         return(
             <div className="Detail">
             <Container fluid={true}>
@@ -117,7 +126,7 @@ const Detail = () => {
 
 
                     <div className="btn-add-to-card">
-                        <button className="button-card">Them vao gio hang</button>
+                        <button className="button-card" onClick={()=>props.cartAdd(id, size, number, color)}>Them vao gio hang</button>
                     </div>
                 </Col>
                 <Col md="2"></Col>
@@ -159,4 +168,9 @@ const Detail = () => {
         )
 }
 
-export default Detail;
+const mapStateToProps = state => ({
+    cart: state.cart
+})
+
+
+export default connect(mapStateToProps, actions)(Detail);

@@ -19,6 +19,7 @@ import Collection from './pages/Collection';
 import SearchResult from './pages/SearchResult';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
+import ScrollToTop from './component/ScrollToTop';
 
 
 
@@ -74,6 +75,7 @@ class App extends Component {
   render(){
     return (
       <Router>
+        <ScrollToTop />
         <div className="App">
         <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave} props={this.props}/>
           <Switch>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, NavItem, NavbarBrand, Container } from 'reactstrap';
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa"
+import { connect } from 'react-redux';
 
 
 import '../css/topmenu.css';
@@ -55,6 +56,7 @@ const TopMenu = (props) =>  {
                         <NavItem>
                             <Link to="/cart" className="link nav-link">
                                 <FaShoppingCart className="icon-cart"/>
+                                <p className="cart-badge">{props.cart.length}</p>
                             </Link>
                         </NavItem>
                         <NavItem>      
@@ -69,6 +71,9 @@ const TopMenu = (props) =>  {
 
 
 
+const mapStateToProps = state => ({
+    cart: state.cart
+})
     
 
-export default TopMenu;
+export default connect(mapStateToProps,null)(TopMenu);

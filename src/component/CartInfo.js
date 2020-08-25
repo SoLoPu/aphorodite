@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+
 import '../css/cartInfo.css';
 
 import database from '../database/data.json'
@@ -34,7 +36,7 @@ const CartInfo = (props) => {
                 <div className="cross"></div>
                 <div className="cart-sum">
                     <p>Tong</p>
-                    <p>1230</p>
+                    <p>$1230</p>
                 </div>
                 
             </div>
@@ -48,4 +50,8 @@ const CartInfo = (props) => {
     )
 }
 
-export default CartInfo;
+const mapStateToProps = state => ({
+    cart: state.cart
+})
+
+export default connect(mapStateToProps, null)(CartInfo);
