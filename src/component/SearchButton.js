@@ -41,7 +41,7 @@ const SearchButton = (props) => {
 
   return (
     <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
-      <DropdownToggle className="search-button" style={{backgroundColor:"black", border:"none", borderRadius: "5px"}}>
+      <DropdownToggle className="search-button" style={{ backgroundColor: "rgba(0,0,0,0)", border:"none", borderRadius: "5px"}}>
         <FaSearch className="icon-search"/>
       </DropdownToggle>
       <DropdownMenu>

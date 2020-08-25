@@ -26,7 +26,7 @@ const TopMenu = (props) =>  {
                     </div> 
                 </div> */}
 
-                <Navbar fixed={fixed} style={{ backgroundColor: "black", opacity: props.opacity }} onMouseEnter={props.MouseEnter} onMouseLeave={props.MouseLeave}>
+                <Navbar fixed={fixed} style={{ backgroundImage: `linear-gradient( rgba(0,0,0,1), rgba(0,0,0,${props.opacity}))` }} onMouseEnter={props.MouseEnter} onMouseLeave={props.MouseLeave}>
                     <NavbarBrand className="brand">
                         <Link to="/" className="link nav-link">APHRODITE</Link>
                     </NavbarBrand>

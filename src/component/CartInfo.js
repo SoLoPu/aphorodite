@@ -17,10 +17,10 @@ const CartInfo = (props) => {
                     <div className="cross"></div>
                     <div className="cart-info-detail">   
                         <p>{database[item.key-1].name}</p>
-                        <p>x {item.number}</p>
                         <p>{database[item.key-1].price}</p>
                     </div>
                     <div className="cart-info-sub-detail">
+                        <p style={{fontWeight:"bold", color:"black"}}>x {item.number}</p>
                         <p>Size {item.size}</p>
                         <p>Mau {item.color}</p>
                     </div>

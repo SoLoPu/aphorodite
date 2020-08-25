@@ -40,7 +40,7 @@ class App extends Component {
     if(window.pageYOffset === 0) {
       this.setState({
         ...this.state,
-        opacity: 0.2,
+        opacity: 0,
         isTop: true
       })
 
@@ -66,7 +66,7 @@ class App extends Component {
     if(this.state.isTop){
       this.setState({
         ...this.state,
-        opacity: 0.2
+        opacity: 0
       })
     }
   }
