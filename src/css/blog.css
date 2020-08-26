@@ -1,6 +1,69 @@
-.blog-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px
+.banner {
+    position: relative;
+    text-align: center;
+}
+p {
+    margin: 0 !important;
+}
+.banner img {
+    width: 100%
+}
+
+.banner p {
+    font-size: 50px;
+    font-weight: bolder;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.firststep .firststep_img img {
+    width: 100%
+}
+
+.firststep_img_1 {
+    position: relative;
+    text-align: center;
+}
+
+.firststep_img_1_title {
+    padding: 20px 30px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.firststep_img_2 {
+    position: relative;
+    text-align: center;
+}
+
+.firststep_img_2_title {
+    padding: 10px 15px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.firststep_img_3 {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+}
+
+.firststep_img_3_title {
+    padding: 10px 40px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
 }
