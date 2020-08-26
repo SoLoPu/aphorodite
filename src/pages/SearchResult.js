@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Col, Row } from 'reactstrap';
 import { useLocation } from 'react-router-dom';
 import SearchItem from '../component/SearchItem';
@@ -11,15 +11,40 @@ import "../css/searchResult.css"
 const  SearchResult = () => {
     function useQuery() {
         return new URLSearchParams(useLocation().search);
-      }
+    }
 
+    const query = useQuery();
+
+    const [stateAllProducts,setAllProducts] = useState([]);
     const [currentProducts,setCurrentProducts] = useState([]);
+    const [key, setKey] = useState(query.get("key"));
     const [currentPage,setCurrentPage] = useState(null);
     const [totalPages,setTotalPages] = useState(null);
 
+    function setNewDate() {
+        let allProducts = [];
+            database.forEach((item) => {
+                if(item.name.includes(query.get("key"))){
+                    allProducts.push(item);
+                }
+            });
+        setAllProducts([...allProducts],console.log(stateAllProducts));
+    }
+
+    // useEffect(()=>{
+    //     setNewDate();
+    // },[]);
+
+    
+
     const onPageChanged = data => {
 
-        const allProducts = database;
+        let allProducts = [];
+            database.forEach((item) => {
+                if(item.name.includes(query.get("key"))){
+                    allProducts.push(item);
+                }
+            });
         const { currentPage } = data;
 
         const pageLimit = 8;
@@ -28,6 +53,7 @@ const  SearchResult = () => {
         const currentProduct = allProducts.slice(offset, offset + pageLimit);
     
 
+        setAllProducts(state => [...allProducts]);
         setCurrentPage(currentPage);
         setCurrentProducts(currentProduct);
         setTotalPages(totalPages);
@@ -35,7 +61,7 @@ const  SearchResult = () => {
     
 
 
-    const query = useQuery();
+    
     return(
         <div className="SearchResult">
             <div className="collection-banner">
@@ -62,8 +88,7 @@ const  SearchResult = () => {
                 </Row>
                 <Row>
                     <Col style={{padding: "0"}}>
-                    <p style={{paddingTop: "25px"}}>{database.length} ket qua cho "{query.get("key")}" </p>
-
+                    <p style={{paddingTop: "25px"}}>{stateAllProducts.length} ket qua cho "{query.get("key")}" </p>
                     </Col>
                 </Row>
             </Container>

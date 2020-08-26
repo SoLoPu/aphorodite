@@ -38,7 +38,7 @@ const CarouselComponent = (props) => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} style={{width:width, height: "800px"}}/>
+        <img src={item.src} alt={item.altText} style={{width:width, height: "950px"}}/>
         <div className="carouselContainer">
           <h1 className="carouselTitle">{item.header}</h1>
           <button className="carouselButton">SHOP NOW</button>
