@@ -1,0 +1,25 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E7E7;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 15px
+}
+
+.about-background-header {
+    width: 100%;
+    margin-top: -200px;
+    filter: brightness(70%);
+}
+
+
+.title-about {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size: 50px
+}

@@ -66,11 +66,10 @@ const Cart = (props) => {
                         <Col md="2"></Col>
                     </Row>
 
-                    <Row style={{paddingLeft: "200px", marginTop:"100px", borderTop: "1px solid white", paddingTop: "50px"}}>
+                    <Row style={{paddingLeft: "200px", marginTop:"20px", borderTop: "1px solid white", paddingTop: "50px"}}>
 
                         <Col>
                             <p  style={{fontSize: "20px"}}>Ban se thich</p>
-
                         </Col>
                     </Row>
                     <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "50px"}}>
@@ -117,14 +116,11 @@ const Cart = (props) => {
                 </div>
                 <Container fluid="true" className="cart">
                 <Row style={{paddingLeft: "200px"}}>
-
                         <Col>
                             <p  style={{fontSize: "20px"}}>Ban se thich</p>
-
                         </Col>
                     </Row>
                     <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "100px"}}>
-                        
                         {
                             samedata.map((product) => 
                             <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}}>
@@ -132,8 +128,6 @@ const Cart = (props) => {
                             </Col>
                             )
                         }
-
-
                     </Row>
                 </Container>
             </div>
