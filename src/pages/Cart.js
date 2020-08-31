@@ -55,7 +55,7 @@ const Cart = (props) => {
                         <h3 style={{color:"grey"}}>Gio hang</h3>
                             {
                                 props.cart.map((item)=>
-                                    <CartItem item={item} />
+                                    <CartItem item={item} key={item.key}/>
                                 )
                             }
                         </Col>
@@ -76,7 +76,7 @@ const Cart = (props) => {
                         
                         {
                             samedata.map((product) => 
-                            <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}}>
+                            <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={product.key}>
                                 <SearchItem product={product}/>
                             </Col>
                             )
@@ -123,7 +123,7 @@ const Cart = (props) => {
                     <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "100px"}}>
                         {
                             samedata.map((product) => 
-                            <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}}>
+                            <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={product.key}>
                                 <SearchItem product={product}/>
                             </Col>
                             )

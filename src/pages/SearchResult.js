@@ -17,7 +17,6 @@ const  SearchResult = () => {
 
     const [stateAllProducts,setAllProducts] = useState([]);
     const [currentProducts,setCurrentProducts] = useState([]);
-    const [key, setKey] = useState(query.get("key"));
     const [currentPage,setCurrentPage] = useState(null);
     const [totalPages,setTotalPages] = useState(null);
 
@@ -97,7 +96,7 @@ const  SearchResult = () => {
             <Row >
                 
                     {currentProducts.map((product, index)=>
-                        <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}}>
+                        <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={index}>
                             <SearchItem product={product}/>
                         </Col>
                     )}

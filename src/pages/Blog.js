@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Col, Row } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import '../css/blog.css'
 export default class Blog extends Component {
   render() {

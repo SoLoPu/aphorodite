@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Col, Row } from 'reactstrap';
+import React from 'react';
+import { Container } from 'reactstrap';
 
 import '../css/about.css';
 

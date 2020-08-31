@@ -9,7 +9,7 @@ const Blog = () => {
         return(
             <Container className="Blog" fluid="true">
                 <div className="blog-title">
-                    <h1>BLOG</h1>
+                    <h1 style={{display:"flex", justifyContent:"center", alignItems:"center", marginTop: "50px"}}>BLOG</h1>
                 </div>
                 
                 <Row style={{paddingTop: "100px"}}>

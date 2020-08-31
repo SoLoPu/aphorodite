@@ -155,7 +155,7 @@ const Detail = (props) => {
            
                 {
                     samedata.map((product) => 
-                    <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}}>
+                    <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={product.key}>
                         <SearchItem product={product}/>
                     </Col>
                     )

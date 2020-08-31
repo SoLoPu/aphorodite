@@ -12,10 +12,9 @@ const CartInfo = (props) => {
     return(
        <div className="card-info">
             <h1>Thong tin don hang</h1>
-            
             {
                 cart.map((item)=>
-                <div className="cart-info-form">
+                <div className="cart-info-form" key={item.key}>
                     <div className="cross"></div>
                     <div className="cart-info-detail">   
                         <p>{database[item.key-1].name}</p>
