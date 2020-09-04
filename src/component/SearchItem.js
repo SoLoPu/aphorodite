@@ -34,7 +34,7 @@ const SearchItem = (props) => {
                                     }}
                                     >
                                         
-                                        <img className="item-img" src={product.src2} alt=""/>
+                                        <img className="item-img" src={product.src2} alt="Mat hình"/>
                                         <p className="name">{product.name}</p>
                                         <p className="price">{product.price}</p>
                 </Link>
