@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
@@ -16,29 +16,40 @@ import SearchItem from '../component/SearchItem';
 
 
 const Cart = (props) => {
-    const samedata = database.slice(0,4);
+    const samedata = database.slice(10,14);
 
-    const cart = [
-        {
-            key: 5,
-            size: "L",
-            number: "6",
-            color: "blue"
-        },
-        {
-            key: 12,
-            size: "S",
-            number: "4",
-            color: "blue"
-        },
-        {
-            key: 16,
-            size: "L",
-            number: "7",
-            color: "blue"
+
+    const { cart, cartIncrease, cartDecrease, cartDelete } = props;
+
+    const [total, settotal] = useState(0);
+
+    useEffect(() => {
+        let temp = 0;
+
+        for(let i=0; i<cart.length; i++){
+            temp+=database[cart[i].key-1].price*cart[i].number;
         }
-    ]
+        settotal(temp);
+    }, []);
 
+    const cartIncreaseTotal = (key) => {
+        settotal(total+database[key-1].price);
+        cartIncrease(key);
+    }
+
+    const cartDecreaseTotal = (key) => {
+        if((total-database[key-1].price)!==0)
+        {
+            settotal(total-database[key-1].price);
+            cartDecrease(key);
+        }
+        
+    }
+
+    const cartDeleteTotal = (item) => {
+        settotal(total-database[item.key-1].price*item.number);
+        cartDelete(item.key);
+    }
 
     if(props.cart.length !== 0)
     {
@@ -55,24 +66,24 @@ const Cart = (props) => {
                         <h3 style={{color:"grey"}}>Gio hang</h3>
                             {
                                 props.cart.map((item)=>
-                                    <CartItem item={item} key={item.key}/>
+                                    <CartItem item={item} key={item.key} cartIncrease={cartIncreaseTotal} cartDecrease={cartDecreaseTotal} cartDelete={cartDeleteTotal}/>
                                 )
                             }
                         </Col>
                         <Col md="3">
-                            <CartInfo cart={cart}/>
+                            <CartInfo cart={props.cart} total={total}/>
                         
                         </Col>
                         <Col md="2"></Col>
                     </Row>
 
-                    <Row style={{paddingLeft: "200px", marginTop:"20px", borderTop: "1px solid white", paddingTop: "50px"}}>
+                    <Row style={{paddingLeft: "100px", marginTop:"20px", borderTop: "1px solid white", paddingTop: "50px"}}>
 
                         <Col>
-                            <p  style={{fontSize: "20px"}}>Ban se thich</p>
+                        <p  style={{fontSize: "20px", paddingBottom: "25px"}}>Ban se thich</p>
                         </Col>
                     </Row>
-                    <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "50px"}}>
+                    <Row style={{paddingLeft: "25px", paddingRight: "32px", marginBottom: "100px"}}>
                         
                         {
                             samedata.map((product) => 
@@ -115,12 +126,12 @@ const Cart = (props) => {
                     
                 </div>
                 <Container fluid="true" className="cart">
-                <Row style={{paddingLeft: "200px"}}>
+                <Row style={{paddingLeft: "25px"}}>
                         <Col>
-                            <p  style={{fontSize: "20px"}}>Ban se thich</p>
+                            <p  style={{fontSize: "20px", paddingBottom: "25px"}}>Ban se thich</p>
                         </Col>
                     </Row>
-                    <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "100px"}}>
+                    <Row style={{paddingLeft: "25px", paddingRight: "30px", marginBottom: "100px"}}>
                         {
                             samedata.map((product) => 
                             <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={product.key}>

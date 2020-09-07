@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Container, Col, Row } from 'reactstrap';
 import { useLocation } from 'react-router-dom';
 import SearchItem from '../component/SearchItem';
@@ -26,15 +26,11 @@ const  SearchResult = () => {
                 if(item.name.includes(query.get("key"))){
                     allProducts.push(item);
                 }
+                console.log(item);
             });
         setAllProducts([...allProducts],console.log(stateAllProducts));
     }
 
-    // useEffect(()=>{
-    //     setNewDate();
-    // },[]);
-
-    
 
     const onPageChanged = data => {
 
@@ -73,10 +69,10 @@ const  SearchResult = () => {
                 </Row>
                 <Row style={{paddingBottom: "50px"}}>
                     <Col md="7" className="collection-story" style={{padding:0}}>
-                        <img src="https://ss-images.catscdn.vn/2016/08/26/710789/cats.jpg" alt="banner-left" style={{width:"750pt", height:"250pt", borderRadius:"10pt"}}></img>
+                        <img src="https://cdn.videogamesblogger.com/wp-content/uploads/2019/09/Arise-A-Simple-Story-Banner.jpg" alt="banner-left" style={{width:"700pt", height:"250pt", borderRadius:"10pt"}}></img>
                     </Col>
                     <Col md="5" className="">
-                        <img src="https://ss-images.catscdn.vn/2016/08/26/710789/cats.jpg" alt="banner-left" style={{width:"520pt", height:"250pt", borderRadius:"10pt"}}></img>
+                        <img src="https://cdn.shopify.com/s/files/1/0083/5167/8530/files/banner1_1920x960.png?v=1594625614" alt="banner-left" style={{width:"470pt", height:"250pt", borderRadius:"10pt"}}></img>
                     </Col>
                 </Row>
                 <Row >
@@ -87,13 +83,13 @@ const  SearchResult = () => {
                 </Row>
                 <Row>
                     <Col style={{padding: "0"}}>
-                    <p style={{paddingTop: "25px"}}>{stateAllProducts.length} ket qua cho "{query.get("key")}" </p>
+                    <p style={{paddingTop: "25px", paddingBottom:"25px"}}>{stateAllProducts.length} ket qua cho "{query.get("key")}" </p>
                     </Col>
                 </Row>
             </Container>
 
-            <Container className="SearchResult" fluid="true" style={{paddingLeft: "200px", paddingRight: "200px"}}>
-            <Row >
+            <Container className="SearchResult" fluid="true">
+            <Row style={{paddingLeft: "25px", paddingRight:"30px"}}>
                 
                     {currentProducts.map((product, index)=>
                         <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={index}>
@@ -104,7 +100,7 @@ const  SearchResult = () => {
             </Row>
 
             <Row>
-                <div className="d-flex flex-row py-4 align-items-center" style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+                <div className="d-flex flex-row py-4 align-items-center" style={{display:"flex", alignItems:"center", justifyContent:"center", marginLeft:"100px"}}>
                     <Pagination totalRecords={50} pageLimit={8} pageNeighbours={0} onPageChanged={onPageChanged} />
                 </div>
             </Row>

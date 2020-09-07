@@ -5,6 +5,7 @@ import Carousel from '../component/Carousel'
 import BestProduct from '../component/BestProduct';
 import Blog from '../component/Blog';
 
+import database from '../database/data.json'
 export default class Home extends Component {
 
   constructor(props) {
@@ -45,8 +46,8 @@ export default class Home extends Component {
                 <div className="homeBody">
                 <Carousel items={this.state.items}/>
                 <div className="best-selling">
-                    <BestProduct category="Women's Bag" name="Jackie 1961 small holo bag" src="https://media.gucci.com/style/DarkGray_Center_0_0_650x650/1595521803/360_636706_HUHHG_8565_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg"/>
-                    <BestProduct category="Men" name="Jackie 1961 small holo bag" src="https://media.gucci.com/style/DarkGray_Center_0_0_650x650/1595521803/360_636706_HUHHG_8565_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg"/>
+                    <BestProduct category="Women's Dress" name={database[10].name} src={database[10].src1}/>
+                    <BestProduct category="Shoes" name={database[14].name} src={database[14].src1}/>
                     <Blog />
                 </div>
                 </div>

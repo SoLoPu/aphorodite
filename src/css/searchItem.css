@@ -5,7 +5,6 @@
     text-align: center;
     display: flex;
     z-index: 100;
-
 }
 
 .link-no-hover{
@@ -33,9 +32,14 @@
 }
 
 
+.item-img-not-hover {
+    width: 400px;
+    height: 100%;
+}
+
 .item-img {
-    width: 333px;
-    height: 400px;
+    width: 400px;
+    height: 100%;
 }
 
 .collection-banner-img {

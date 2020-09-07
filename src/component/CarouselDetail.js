@@ -39,12 +39,12 @@ const CarouselComponent = (props) => {
         key={item.key}
       >
         <div style={{display:"flex", flexDirection:"row"}}>
-          <img src="http://media.gucci.com/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg" alt={item.altText} style={{width:width, height: "800px"}}/>
+          <img src={item.src1} alt={item.altText} style={{width:width, height: "800px"}}/>
           {/* <div className="carouselContainer">
             <h1 className="carouselTitlefadsf">{item.header}</h1>
             <button className="carouselButton">SHOP NOW</button>
           </div> */}
-          <img src="http://media.gucci.com/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg" alt={item.altText} style={{width:width, height: "800px"}}/>
+          <img src={item.src2} alt={item.altText} style={{width:width, height: "800px"}}/>
         </div>
       </CarouselItem>
     );

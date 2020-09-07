@@ -1,40 +1,24 @@
 import React, { useState } from 'react'
 import { useParams } from "react-router";
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 
 
 import '../css/detail.css';
 
-import CarouselDetail from '../component/CarouselDetail'
+// import CarouselDetail from '../component/CarouselDetail'
 
 import database from '../database/data.json';
 import SearchItem from '../component/SearchItem';
 
 
+const width = window.screen.width;
+
 
 
 const Detail = (props) => {
-        const items = [
-            {
-                key:"1",
-                src1: 'media.gucci.com/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg',
-                src2: 'media.gucci.com/style/DarkGray_Center_0_0_490x490/1594744211/636709_10O0G_1000_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg'
-            },
-            {
-                key:"2",
-                src1: "media.gucci.com/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg",
-                src2: "media.gucci.com/style/DarkGray_Center_0_0_490x490/1594744211/636709_10O0G_1000_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg"
-                
-            },
-            {
-                key:"3",
-                src1: "media.gucci.cclassnamsom/style/DarkGray_Center_0_0_490x490/1595436309/636709_10O0G_1000_005_100_0000_Light-Jackie-1961-small-hobo-bag.jpg",
-                src2: "media.gucci.com/style/DarkGray_Center_0_0_490x490/1594744211/636709_10O0G_1000_001_080_0000_Light-Jackie-1961-small-hobo-bag.jpg"
-                
-            }
-        ]
+        
         const [size, setSize] = useState("S");
         const [color, setColor] = useState("blue");
         const [number, setNumber] = useState(1);
@@ -70,12 +54,20 @@ const Detail = (props) => {
 
         return(
             <div className="Detail">
-            <Container fluid={true}>
+
                 <div className="detail-carousel">
-                    <CarouselDetail items={items}/>
+                    {/* <CarouselDetail items={items}/> */}
+                    <div style={{display:"flex", flexDirection:"row"}}>
+                    <img src={database[id-1].src1} alt="" style={{width:width, height: "800px"}}/>
+                    {/* <div className="carouselContainer">
+                        <h1 className="carouselTitlefadsf">{item.header}</h1>
+                        <button className="carouselButton">SHOP NOW</button>
+                    </div> */}
+                    <img src={database[id-1].src1} alt="" style={{width:width, height: "800px"}}/>
+                    </div>
                     <div className="detail-info">
                         <h2 className="detail-name">{database[id-1].name}</h2>
-                        <p>{database[id-1].price}</p>
+                        <p>${database[id-1].price}</p>
                     </div>
                 </div>
                 
@@ -146,11 +138,11 @@ const Detail = (props) => {
             <Row style={{marginTop:"20px"}}>
                 <Col md="1"></Col>
                 <Col>
-                    <p  style={{fontSize: "20px"}}>Ban se thich</p>
+                    <p  style={{fontSize: "20px", paddingBottom: "50px"}}>Ban se thich</p>
 
                 </Col>
             </Row>
-            <Row style={{paddingLeft: "200px", paddingRight: "200px", marginBottom: "100px"}}>
+            <Row style={{marginBottom: "100px", paddingRight:"29px", paddingLeft:"25px"}}>
                 
            
                 {
@@ -163,7 +155,7 @@ const Detail = (props) => {
 
 
             </Row>
-            </Container>
+
             </div>
         )
 }

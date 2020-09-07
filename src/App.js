@@ -28,7 +28,7 @@ class App extends Component {
     super(props)
   
     this.state = {
-      opacity: 0.2,
+      opacity: 0,
       isTop: true
     };
 

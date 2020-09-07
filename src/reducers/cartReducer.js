@@ -2,26 +2,7 @@ import {ADD, INCREASE, DECREASE, CLEAR, DELETE} from  '../actions/types';
 
 
 
-const inittialCart = [
-    // {
-    //     key: 5,
-    //     size: "L",
-    //     number: "6",
-    //     color: "blue"
-    // },
-    // {
-    //     key: 12,
-    //     size: "S",
-    //     number: "4",
-    //     color: "blue"
-    // },
-    // {
-    //     key: 16,
-    //     size: "L",
-    //     number: "7",
-    //     color: "blue"
-    // }
-];
+const inittialCart = [];
 
 export default function (state=inittialCart, action){
     switch(action.type) {

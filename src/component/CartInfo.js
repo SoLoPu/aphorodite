@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 
@@ -8,7 +8,7 @@ import database from '../database/data.json'
 
 
 const CartInfo = (props) => {
-    const { cart } = props;
+    const { cart, total } = props;
     return(
        <div className="card-info">
             <h1>Thong tin don hang</h1>
@@ -18,15 +18,13 @@ const CartInfo = (props) => {
                     <div className="cross"></div>
                     <div className="cart-info-detail">   
                         <p>{database[item.key-1].name}</p>
-                        <p>{database[item.key-1].price}</p>
+                        <p>${database[item.key-1].price * item.number}</p>
                     </div>
                     <div className="cart-info-sub-detail">
                         <p style={{fontWeight:"bold", color:"black"}}>x {item.number}</p>
                         <p>Size {item.size}</p>
                         <p>Mau {item.color}</p>
                     </div>
-                    
-                    
                 </div>
                 )
             }
@@ -35,7 +33,7 @@ const CartInfo = (props) => {
                 <div className="cross"></div>
                 <div className="cart-sum">
                     <p>Tong</p>
-                    <p>$1230</p>
+                    <p>${total}</p>
                 </div>
                 
             </div>

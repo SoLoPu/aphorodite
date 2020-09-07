@@ -20,7 +20,7 @@ const CartItem = (props) => {
             <div>
                 <div className="cart-item-title">
                     <h4>{database[item.key-1].name}</h4>
-                    <button onClick={() => props.cartDelete(item.key)}>
+                    <button onClick={() => props.cartDelete(item)}>
                         <TiDelete style={{width:"25px", height:"25px"}}/>
                     </button>
                 </div>
@@ -30,9 +30,9 @@ const CartItem = (props) => {
                     <p className="cart-item-size">Size: {item.size}</p>
                     <div className="cart-item-number">
                         <p>So luong:</p>
-                        <button onClick={() => props.cartIncrease(item.key)}>+</button>
-                        <p>{item.number}</p>
                         <button onClick={() => props.cartDecrease(item.key)}>-</button>
+                        <p>{item.number}</p>
+                        <button onClick={() => props.cartIncrease(item.key)}>+</button>
                     </div>
                 </div>
                 
@@ -46,4 +46,4 @@ const mapStateToProps = state => ({
     cart: state.cart
 })
 
-export default connect(mapStateToProps, actions)(CartItem);
+export default connect(mapStateToProps, null)(CartItem);
