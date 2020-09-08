@@ -11,7 +11,7 @@ const CartInfo = (props) => {
     const { cart, total } = props;
     return(
        <div className="card-info">
-            <h1>Thong tin don hang</h1>
+            <h1>Thông tin đơn hàng</h1>
             {
                 cart.map((item)=>
                 <div className="cart-info-form" key={item.key}>
@@ -32,13 +32,13 @@ const CartInfo = (props) => {
             <div className="cart-info-form">
                 <div className="cross"></div>
                 <div className="cart-sum">
-                    <p>Tong</p>
+                    <p>Tổng</p>
                     <p>${total}</p>
                 </div>
                 
             </div>
             <div className="btn-checkout-wrapper">
-                <button className="cart-checkout-button">Thanh toan</button>
+                <button className="cart-checkout-button">Thanh toán</button>
             </div>
 
             

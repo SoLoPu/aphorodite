@@ -44,6 +44,7 @@ const Cart = (props) => {
             cartDecrease(key);
         }
         
+        
     }
 
     const cartDeleteTotal = (item) => {
@@ -57,13 +58,13 @@ const Cart = (props) => {
             <div className="cart-wrapper">
                 <div>
                     <img src="http://media.gucci.com/content/ShoppingBagHeroHeaderStandard_1600x480/1590052503/ShoppingBagHeroHeaderStandard_S03-PREFALL-animals_001_Default.jpg" alt="cart-background" className="cart-background-header"></img>
-                    <h1 className="title-cart">SHOPPING CART</h1>
+                    <h1 className="title-cart">GIỎ HÀNG</h1>
                 </div>
                 <Container fluid="true" className="cart">
                     <Row>
                         <Col md="2"></Col>
                         <Col md="5">
-                        <h3 style={{color:"grey"}}>Gio hang</h3>
+                        <h3 style={{color:"grey"}}>Giỏ hàng</h3>
                             {
                                 props.cart.map((item)=>
                                     <CartItem item={item} key={item.key} cartIncrease={cartIncreaseTotal} cartDecrease={cartDecreaseTotal} cartDelete={cartDeleteTotal}/>
@@ -80,10 +81,10 @@ const Cart = (props) => {
                     <Row style={{paddingLeft: "100px", marginTop:"20px", borderTop: "1px solid white", paddingTop: "50px"}}>
 
                         <Col>
-                        <p  style={{fontSize: "20px", paddingBottom: "25px"}}>Ban se thich</p>
+                        <p  className="cart-related-title">Bạn sẽ thích</p>
                         </Col>
                     </Row>
-                    <Row style={{paddingLeft: "25px", paddingRight: "32px", marginBottom: "100px"}}>
+                    <Row className="cart-related">
                         
                         {
                             samedata.map((product) => 
@@ -108,13 +109,13 @@ const Cart = (props) => {
                         <Col md="1"></Col>
                         <Col md="6">
                             <div style={{borderBottom: "1px solid white"}}>
-                                <h3 style={{color:"white"}}>Gio hang</h3>
+                                <h3 style={{color:"white"}}>Giỏ hàng</h3>
                             </div>
-                            <h3 style={{color:"white", marginTop:"50px"}}>Hien khong co san pham nao trong gio hang</h3>
+                            <h3 style={{color:"white", marginTop:"50px"}}>Hiện không có sản phẩm nào trong giỏ hàng</h3>
                         </Col>
                         <Col md="4" style={{backgroundColor : "white"}}>
                         <div className="cart-empty-info-form">
-                            <p>Chung toi co the giup gi cho ban</p>
+                            <p>Chúng tôi có thể giúp gì cho bạn</p>
                             <p>0901564654</p>
                             <p>1753057@student.hcmus.edu.vn</p>
                         </div>
@@ -123,15 +124,14 @@ const Cart = (props) => {
                     </Row>
                     
                 </Container>
-                    
                 </div>
                 <Container fluid="true" className="cart">
                 <Row style={{paddingLeft: "25px"}}>
                         <Col>
-                            <p  style={{fontSize: "20px", paddingBottom: "25px"}}>Ban se thich</p>
+                            <p  className="cart-related-title">Bạn sẽ thích</p>
                         </Col>
                     </Row>
-                    <Row style={{paddingLeft: "25px", paddingRight: "30px", marginBottom: "100px"}}>
+                    <Row className="cart-related">
                         {
                             samedata.map((product) => 
                             <Col md="3" style={{backgroundColor: "#E7E7E7", padding: "0"}} key={product.key}>

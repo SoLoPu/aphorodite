@@ -33,25 +33,25 @@ const TopMenu = (props) =>  {
                     </NavbarBrand>
                     <Nav className="mr-auto">
                         <NavItem>
-                        <Link to="/" className="link nav-link">Trang chu</Link>
+                        <Link to="/" className="link nav-link">TRANG CHỦ</Link>
                         </NavItem>
                         <NavItem>
-                        <Link to="/shop"  className="link nav-link">Mua sam</Link>
+                        <Link to="/shop"  className="link nav-link">MUA SẮM</Link>
                         </NavItem>
                         <NavItem>
-                        <Link to="/blog"  className="link nav-link">Blog</Link>
+                        <Link to="/blog"  className="link nav-link">BLOG</Link>
                         </NavItem>
                         <NavItem>
-                        <Link to="/about"  className="link nav-link">Ve chung toi</Link>
+                        <Link to="/about"  className="link nav-link">VỀ CHÚNG TÔI</Link>
                         </NavItem>
 
                     </Nav>
                     <Nav className="ml-auto">
                         <NavItem>
-                        <Link to="/login" className="link nav-link">Dang nhap</Link>
+                        <Link to="/login" className="link nav-link">ĐĂNG NHẬP</Link>
                         </NavItem>
                         <NavItem>
-                            <Link to="/signup" className="link nav-link">Dang ki</Link>
+                            <Link to="/signup" className="link nav-link">ĐĂNG KÍ</Link>
                         </NavItem>
                         <NavItem>
                             <Link to="/cart" className="link nav-link">

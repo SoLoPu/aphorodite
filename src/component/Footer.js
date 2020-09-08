@@ -12,10 +12,10 @@ const Footer = (props) => {
             <Col xs="1" md="1"></Col>
             <Col md="6" className="addressContain">
                 <h1 className="titleFooter">APHORODITE</h1>
-                <p className="address">227 Nguyen Van Cu, Quan 5, TP Ho Chi Minh</p>
+                <p className="address">227 Nguyễn Văn Cừ, Quận 5, TP Hồ Chí Minh</p>
             </Col>
             <Col md="2" className="contact">
-                <h4 className="titleFooter">Lien he</h4>
+                <h4 className="titleFooter">Liên hệ</h4>
                 <Row>
                     <FaFacebookF className="icon"/>
                     <p>Facebook</p>
@@ -30,9 +30,9 @@ const Footer = (props) => {
                 </Row>
             </Col>
             <Col md="3" className="contact">
-                <h5 className="titleFooter">Nhap email de nhan uu dai</h5>
+                <h5 className="titleFooter">Nhập email để nhận ưu đãi</h5>
                 <InputGroup style={{width: "250px"}}>
-                    <Input placeholder="Nhap email" />
+                    <Input placeholder="Nhập email" />
                 </InputGroup>
             </Col>
             <Col md="1"></Col>

@@ -34,6 +34,7 @@
     height: 50px;
     border-radius: 25px;
     background-color: white;
+    font-size: 20px
 }
 
 .detail-filter {
@@ -46,7 +47,7 @@
 
 .detail-filter h3{
 
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .selection {

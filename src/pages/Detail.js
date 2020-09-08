@@ -75,25 +75,24 @@ const Detail = (props) => {
                 <Col md="1"></Col>
                 <Col md="2">
                     <div className="detail-filter">
-                        <h3>Hoa tiet:</h3>
+                        <h3>Họa tiết:</h3>
                     </div>
 
                     <div className="detail-filter">
-                        <h3>Mau sac:</h3>
+                        <h3>Màu sắc:</h3>
                     </div>
 
                     <div className="detail-filter">
-                        <h3>Kich Co:</h3>
+                        <h3>Kích cỡ:</h3>
 
                     </div>
 
                     <div className="detail-filter">
-                        <h3>So Luong:</h3>
+                        <h3>Số lượng:</h3>
                     </div>
                 </Col>
                 <Col md="2">
                 <div className="selection detail-pattern">
-                       
                         <p>No</p>
                     </div>
 
@@ -105,9 +104,9 @@ const Detail = (props) => {
                     </div>
 
                     <div className="selection">
-                        <button className="detail-size" onClick={selectS} style={{backgroundColor: size==="S"?"grey":"white" }}>S</button>
-                        <button className="detail-size" onClick={selectM} style={{backgroundColor: size==="M"?"grey":"white" }}>M</button>
-                        <button className="detail-size" onClick={selectL} style={{backgroundColor: size==="L"?"grey":"white" }}>L</button>
+                        <button className="detail-size" onClick={selectS} style={{backgroundColor: size==="S"?"grey":"white", color: size==="S"?"white":"black"}}>S</button>
+                        <button className="detail-size" onClick={selectM} style={{backgroundColor: size==="M"?"grey":"white", color: size==="M"?"white":"black"}}>M</button>
+                        <button className="detail-size" onClick={selectL} style={{backgroundColor: size==="L"?"grey":"white", color: size==="L"?"white":"black"}}>L</button>
                     </div>
 
                     <div className="detail-number">
@@ -118,12 +117,12 @@ const Detail = (props) => {
 
 
                     <div className="btn-add-to-card">
-                        <button className="button-card" onClick={()=>props.cartAdd(id, size, number, color)}>Them vao gio hang</button>
+                        <button className="button-card" onClick={()=>props.cartAdd(id, size, number, color)}>Thêm vào giỏ hàng</button>
                     </div>
                 </Col>
                 <Col md="2"></Col>
                 <Col md="4" className="detail-description">
-                    <h2 className="detail-desciption-title">Mo ta san pham</h2>
+                    <h2 className="detail-desciption-title">Mô tả sản phẩm</h2>
                     <p>{database[id-1].description}</p>
                 </Col>
 
@@ -131,14 +130,14 @@ const Detail = (props) => {
             <Row>
                 <Col md="1"></Col>
                 <Col>
-                <a href="/#">Huong dan chon size</a>
+                <a href="/#">Hướng dẫn chọn size</a>
 
                 </Col>
             </Row>
             <Row style={{marginTop:"20px"}}>
                 <Col md="1"></Col>
                 <Col>
-                    <p  style={{fontSize: "20px", paddingBottom: "50px"}}>Ban se thich</p>
+                    <p  style={{fontSize: "20px", paddingBottom: "50px"}}>Bạn sẽ thích</p>
 
                 </Col>
             </Row>

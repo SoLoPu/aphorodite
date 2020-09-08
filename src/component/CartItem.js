@@ -29,7 +29,7 @@ const CartItem = (props) => {
                 <div className="cart-last-part">
                     <p className="cart-item-size">Size: {item.size}</p>
                     <div className="cart-item-number">
-                        <p>So luong:</p>
+                        <p>Số lượng:</p>
                         <button onClick={() => props.cartDecrease(item.key)}>-</button>
                         <p>{item.number}</p>
                         <button onClick={() => props.cartIncrease(item.key)}>+</button>

@@ -65,7 +65,7 @@ const  SearchResult = () => {
             </div>
             <Container className="SearchResult" fluid="true" style={{paddingLeft: "50px"}}>
                 <Row>
-                    <h2 className="story-title">Cau Chuyen</h2>
+                    <h2 className="story-title">Câu chuyện</h2>
                 </Row>
                 <Row style={{paddingBottom: "50px"}}>
                     <Col md="7" className="collection-story" style={{padding:0}}>
@@ -77,13 +77,13 @@ const  SearchResult = () => {
                 </Row>
                 <Row >
                     <Col className="btn-search" md="5" style={{padding: "0"}}>
-                        <button className="btn-search-filter">Filter</button>
-                        <button className="btn-search-filter">Sap xep</button>
+                        <button className="btn-search-filter">Bộ lọc</button>
+                        <button className="btn-search-filter">Sắp xếp</button>
                     </Col>
                 </Row>
                 <Row>
                     <Col style={{padding: "0"}}>
-                    <p style={{paddingTop: "25px", paddingBottom:"25px"}}>{stateAllProducts.length} ket qua cho "{query.get("key")}" </p>
+                    <p style={{paddingTop: "25px", paddingBottom:"25px"}}>{stateAllProducts.length} kết quả cho "{query.get("key")}" </p>
                     </Col>
                 </Row>
             </Container>

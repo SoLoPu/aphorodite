@@ -19,7 +19,7 @@ const Blog = () => {
                     <Row>
                         <BlogItem 
                             src="https://media.gucci.com/content/StyleNewsSingle_Standard_340x202/1595000703/StyleNewsSingle_S01-EPILOGUE-VIDEO-01_001_Default.jpg"
-                            name="Danh gia Gucci Epilogue"
+                            name="Đánh giá Gucci Epilogue"
                             link="THE VIDEO"
                         />
                     </Row>
@@ -36,7 +36,7 @@ const Blog = () => {
                     <Row>
                     <BlogItem 
                             src="https://media.gucci.com/content/StyleNewsDoubleVertical_Standard_340x602/1594990803/StyleNewsDoubleVertical_F01-EPILOGUE-LOOK-001_001_Default.jpg"
-                            name="Epilogue: In Detail"
+                            name="Epilogue: Chi tiết"
                             link="AS TOLD BY ALESSANDRO MICHELE"
                         />
                     </Row>
@@ -46,14 +46,14 @@ const Blog = () => {
                     <Row>
                     <BlogItem 
                             src="https://media.gucci.com/content/StyleNewsSingle_Standard_340x202/1594739703/StyleNewsSingle_notes-from-the-silence_001_Default.jpg"
-                            name="Notes From The Silence"
+                            name="Ghi chú từ The Silence"
                             link="ALESSANDRO MICHELE'S DIARY"
                         />
                     </Row>
                     <Row>
                     <BlogItem 
                             src="https://media.gucci.com/content/StyleNewsSingle_Standard_340x202/1595242805/StyleNewsSingle_Epilogue-beauty-01_001_Default.jpg"
-                            name="#Beauty of Epilogue"
+                            name="#Vẻ đẹp của Epilogue"
                             link="IN DETAIL"
                         />
                     </Row>

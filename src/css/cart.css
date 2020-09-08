@@ -48,3 +48,14 @@
     color: grey;
     padding: 20px
 }
+
+.cart-related-title {
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.cart-related {
+    padding-left: 25px; 
+    padding-right: 70px; 
+    margin-bottom: 100px;
+}

@@ -13,11 +13,11 @@ const BestProduct = (props) => {
             <div className="BestProduct">
                 <img src={src} alt="hello" className="center"/>
                 <div className="title-container">
-                    <p className="category">{ category }</p>
-                    <h2 className="productTitle">{name}</h2>
+                    <p className="category"> {category} </p>
+                    <h2 className="productTitle"> {name} </h2>
                     <GrDiamond/>
                     <Link to="/collection" className="link nav-link">
-                        <button type="button" className="shopButton">SHOP NOW</button>
+                        <button type="button" className="shopButton">MUA NGAY</button>
                     </Link>
                     
                 </div>

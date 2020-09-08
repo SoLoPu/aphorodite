@@ -10,13 +10,13 @@ const About = (props) => {
             <div className="about-wrapper">
             <div>
                 <img src="https://nature-to-nurture.co.uk/wp-content/uploads/2014/03/Mighty-Tree-With-Green-Leaves-Banner-Nature-To-Nurture-Aromatherapy-In-Hemel-St-Albans.jpg" alt="cart-background" className="about-background-header"></img>
-                <h1 className="title-about">Ve chung toi</h1>
+                <h1 className="title-about">Thông tin về chúng tôi</h1>
             </div>
             <Container fluid="true" className="about">
                 <p>
-                    Chung toi la mot nhom sinh vien dai hoc Khoa Hoc Tu Nhien <br/>
-                    voi mong muon mang lai nhung gi thoai mai nhat ve thoi trang <br/>
-                    cho khach hang, chung toi tao ra trang Aphrodite <br/>
+                    Chúng tôi là nhóm sinh viên đại học Khoa Học Tự Nhiên <br/>
+                    với mong muốn mang lại những điều mới nhất tuyệt vời nhất về <br/>
+                    thời trang cho khách hàng, chúng tôi tạo ra trang Aphrodite <br/>
                 </p>
             </Container>
         </div>

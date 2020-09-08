@@ -41,7 +41,7 @@ const CarouselComponent = (props) => {
         <img src={item.src} alt={item.altText} style={{width:width, height: "950px"}}/>
         <div className="carouselContainer">
           <h1 className="carouselTitle">{item.header}</h1>
-          <button className="carouselButton">SHOP NOW</button>
+          <button className="carouselButton">MUA NGAY</button>
         </div>
         
       </CarouselItem>
