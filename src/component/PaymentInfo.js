@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 
@@ -6,10 +6,8 @@ import '../css/cartInfo.css';
 
 import database from '../database/data.json'
 
-import { Link } from "react-router-dom";
 
-
-const CartInfo = (props) => {
+const PaymentInfo = (props) => {
     const { cart, total } = props;
     return(
        <div className="card-info">
@@ -19,7 +17,9 @@ const CartInfo = (props) => {
                 <div>
                     <div className="cross"></div>
                     <div className="cart-info-form" key={item.key}>
-                        <div>   
+                       
+                        <img src={database[item.key-1].src1} alt="" style={{width: "100px", marginBottom:"20px", marginRight:"20px"}}/>
+                        <div className="">   
                             <p className="cart-info-detail">{database[item.key-1].name}</p>
                             <p style={{fontWeight:"bold", color:"black"}}>x {item.number}</p>
                             <p>Size {item.size}</p>
@@ -30,7 +30,7 @@ const CartInfo = (props) => {
                         </div>
                     </div>
                 </div>
-                
+               
                 )
             }
 
@@ -43,9 +43,7 @@ const CartInfo = (props) => {
                 
             </div>
             <div className="btn-checkout-wrapper">
-                <Link to="/payment" className="link nav-link">
-                    <button className="cart-checkout-button">Thanh toán</button>
-                </Link>
+                <button className="cart-checkout-button" onClick={()=>alert("Thành công")}>Thanh toán</button>
             </div>
 
             
@@ -58,4 +56,4 @@ const mapStateToProps = state => ({
     cart: state.cart
 })
 
-export default connect(mapStateToProps, null)(CartInfo);
+export default connect(mapStateToProps, null)(PaymentInfo);

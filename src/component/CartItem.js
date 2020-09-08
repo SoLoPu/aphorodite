@@ -16,7 +16,7 @@ const CartItem = (props) => {
     const { item } = props;
     return(
         <div className="cart-item">
-            <img src={database[item.key-1].src1} alt="CartItem" />
+            <img src={database[item.key-1].src1} alt="CartItem" style={{width: "250px", height: "250px"}} />
             <div>
                 <div className="cart-item-title">
                     <h4>{database[item.key-1].name}</h4>
@@ -25,7 +25,7 @@ const CartItem = (props) => {
                     </button>
                 </div>
                 
-                {/* <p className="cart-item-description">{database[item.key-1].description}</p> */}
+                {/* <p className="cart-item-description">{database[item.key-1].description.split('.',1).join(".")}</p> */}
                 <div className="cart-last-part" style={{display: "flex", justifyContent:"center", flexDirection: "column", height:"100px"}}>
                     <p className="cart-item-size">Size: {item.size}</p>
                     <p className="cart-item-size">Giá: ${database[item.key-1].price}</p>

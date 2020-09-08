@@ -13,20 +13,26 @@
     background-color: grey;
     margin-top: 30px;
     margin-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 
 .cart-info-detail {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-weight: bold;
+    */
+    font-weight: bold; 
     
 }
 
 .cart-info-form {
     padding-left: 20px;
     padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .cart-info-sub-detail {
@@ -54,4 +60,6 @@
     justify-content: space-between;
     font-weight: bold;
     font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
 }

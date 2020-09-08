@@ -58,13 +58,13 @@ const Cart = (props) => {
             <div className="cart-wrapper">
                 <div>
                     <img src="http://media.gucci.com/content/ShoppingBagHeroHeaderStandard_1600x480/1590052503/ShoppingBagHeroHeaderStandard_S03-PREFALL-animals_001_Default.jpg" alt="cart-background" className="cart-background-header"></img>
-                    <h1 className="title-cart">GIỎ HÀNG</h1>
+                    <h1 className="title-cart">Giỏ hàng</h1>
                 </div>
                 <Container fluid="true" className="cart">
                     <Row>
                         <Col md="2"></Col>
                         <Col md="5">
-                        <h3 style={{color:"grey"}}>Giỏ hàng</h3>
+                        <h3 style={{color:"grey"}}>Thông tin chi tiết</h3>
                             {
                                 props.cart.map((item)=>
                                     <CartItem item={item} key={item.key} cartIncrease={cartIncreaseTotal} cartDecrease={cartDecreaseTotal} cartDelete={cartDeleteTotal}/>

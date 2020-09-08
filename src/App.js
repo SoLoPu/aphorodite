@@ -19,6 +19,8 @@ import Collection from './pages/Collection';
 import SearchResult from './pages/SearchResult';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
+import Payment from './pages/Payment'
+
 import ScrollToTop from './component/ScrollToTop';
 
 
@@ -79,6 +81,9 @@ class App extends Component {
         <div className="App">
         <TopMenu opacity={this.state.opacity} MouseEnter={this.MenuMouseEnter} MouseLeave={this.MenuMouseLeave} props={this.props}/>
           <Switch>
+          <Route path="/payment">
+              <Payment />
+            </Route>
             <Route path="/cart">
               <Cart />
             </Route>
