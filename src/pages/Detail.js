@@ -63,7 +63,7 @@ const Detail = (props) => {
                         <h1 className="carouselTitlefadsf">{item.header}</h1>
                         <button className="carouselButton">SHOP NOW</button>
                     </div> */}
-                    <img src={database[id-1].src1} alt="" style={{width:width, height: "800px"}}/>
+                    <img src={database[id-1].src3} alt="" style={{width:width, height: "800px"}}/>
                     </div>
                     <div className="detail-info">
                         <h2 className="detail-name">{database[id-1].name}</h2>
