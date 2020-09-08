@@ -72,8 +72,13 @@ const Detail = (props) => {
                 </div>
                 
             <Row>
+                <Col md="2"></Col>
+                <Col md="4" className="detail-description">
+                    <h2 className="detail-desciption-title">Mô tả sản phẩm</h2>
+                    <p style={{fontSize: "20px"}}>{database[id-1].description}</p>
+                </Col>
                 <Col md="1"></Col>
-                <Col md="2">
+                <Col md="1">
                     <div className="detail-filter">
                         <h3>Họa tiết:</h3>
                     </div>
@@ -121,23 +126,19 @@ const Detail = (props) => {
                     </div>
                 </Col>
                 <Col md="2"></Col>
-                <Col md="4" className="detail-description">
-                    <h2 className="detail-desciption-title">Mô tả sản phẩm</h2>
-                    <p>{database[id-1].description}</p>
-                </Col>
+                
 
             </Row>
-            <Row>
+            {/* <Row>
                 <Col md="1"></Col>
                 <Col>
                 <a href="/#">Hướng dẫn chọn size</a>
-
                 </Col>
-            </Row>
-            <Row style={{marginTop:"20px"}}>
-                <Col md="1"></Col>
+            </Row> */}
+            <Row style={{marginTop:"100px", marginLeft: "5px"}}>
+               
                 <Col>
-                    <p  style={{fontSize: "20px", paddingBottom: "50px"}}>Bạn sẽ thích</p>
+                    <p  style={{fontSize: "35px", paddingBottom: "20px"}}>Bạn sẽ thích</p>
 
                 </Col>
             </Row>

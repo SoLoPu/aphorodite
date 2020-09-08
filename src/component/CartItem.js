@@ -25,12 +25,13 @@ const CartItem = (props) => {
                     </button>
                 </div>
                 
-                <p className="cart-item-description">{database[item.key-1].description}</p>
-                <div className="cart-last-part">
+                {/* <p className="cart-item-description">{database[item.key-1].description}</p> */}
+                <div className="cart-last-part" style={{display: "flex", justifyContent:"center", flexDirection: "column", height:"100px"}}>
                     <p className="cart-item-size">Size: {item.size}</p>
+                    <p className="cart-item-size">Giá: ${database[item.key-1].price}</p>
                     <div className="cart-item-number">
                         <p>Số lượng:</p>
-                        <button onClick={() => props.cartDecrease(item.key)}>-</button>
+                        <button onClick={() => props.cartDecrease(item)}>-</button>
                         <p>{item.number}</p>
                         <button onClick={() => props.cartIncrease(item.key)}>+</button>
                     </div>

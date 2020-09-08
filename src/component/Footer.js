@@ -11,7 +11,7 @@ const Footer = (props) => {
           <Row>
             <Col xs="1" md="1"></Col>
             <Col md="6" className="addressContain">
-                <h1 className="titleFooter">APHORODITE</h1>
+                <h1 className="titleFooter">APHRODITE</h1>
                 <p className="address">227 Nguyễn Văn Cừ, Quận 5, TP Hồ Chí Minh</p>
             </Col>
             <Col md="2" className="contact">

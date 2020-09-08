@@ -37,11 +37,11 @@ const Cart = (props) => {
         cartIncrease(key);
     }
 
-    const cartDecreaseTotal = (key) => {
-        if((total-database[key-1].price)!==0)
+    const cartDecreaseTotal = (item) => {
+        if((item.number)!==1)
         {
-            settotal(total-database[key-1].price);
-            cartDecrease(key);
+            settotal(total-database[item.key-1].price);
+            cartDecrease(item.key);
         }
         
         
@@ -78,7 +78,7 @@ const Cart = (props) => {
                         <Col md="2"></Col>
                     </Row>
 
-                    <Row style={{paddingLeft: "100px", marginTop:"20px", borderTop: "1px solid white", paddingTop: "50px"}}>
+                    <Row style={{paddingLeft: "20px", marginTop:"20px", paddingTop: "50px"}}>
 
                         <Col>
                         <p  className="cart-related-title">Bạn sẽ thích</p>
