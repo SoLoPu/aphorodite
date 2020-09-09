@@ -46,8 +46,8 @@ export default class Home extends Component {
                 <div className="homeBody">
                 <Carousel items={this.state.items}/>
                 <div className="best-selling">
-                    <BestProduct category="VÁY NỮ" name={database[10].name} src={database[10].src1}/>
-                    <BestProduct category="GIÀY" name={database[14].name} src={database[14].src1}/>
+                    <BestProduct category="VÁY NỮ" searchKey={10} name={database[10].name} src={database[10].src1}/>
+                    <BestProduct category="GIÀY" searchKey={14} name={database[14].name} src={database[14].src1}/>
                     <Blog />
                 </div>
                 </div>

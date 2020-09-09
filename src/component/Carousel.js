@@ -6,6 +6,7 @@ import {
   CarouselIndicators
 } from 'reactstrap';
 
+import { Link } from "react-router-dom";
 import '../css/carousel.css'
 
 const width = window.screen.width;
@@ -41,7 +42,10 @@ const CarouselComponent = (props) => {
         <img src={item.src} alt={item.altText} style={{width:width, height: "950px"}}/>
         <div className="carouselContainer">
           <h1 className="carouselTitle">{item.header}</h1>
-          <button className="carouselButton">MUA NGAY</button>
+          <Link to="/search?key="  style={{color:"black"}}>
+            <button className="carouselButton">MUA NGAY</button>
+          </Link>
+          
         </div>
         
       </CarouselItem>

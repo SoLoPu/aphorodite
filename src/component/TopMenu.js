@@ -35,9 +35,9 @@ const TopMenu = (props) =>  {
                         <NavItem>
                         <Link to="/" className="link nav-link">TRANG CHỦ</Link>
                         </NavItem>
-                        <NavItem>
+                        {/* <NavItem>
                         <Link to="/shop"  className="link nav-link">MUA SẮM</Link>
-                        </NavItem>
+                        </NavItem> */}
                         <NavItem>
                         <Link to="/blog"  className="link nav-link">BLOG</Link>
                         </NavItem>
@@ -47,12 +47,12 @@ const TopMenu = (props) =>  {
 
                     </Nav>
                     <Nav className="ml-auto">
-                        <NavItem>
+                        {/* <NavItem>
                         <Link to="/login" className="link nav-link">ĐĂNG NHẬP</Link>
                         </NavItem>
                         <NavItem>
                             <Link to="/signup" className="link nav-link">ĐĂNG KÍ</Link>
-                        </NavItem>
+                        </NavItem> */}
                         <NavItem>
                             <Link to="/cart" className="link nav-link">
                                 <FaShoppingCart className="icon-cart"/>

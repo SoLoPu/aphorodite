@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Col, Row } from 'reactstrap';
 
 import '../css/blog.css';
-
+import { Link } from "react-router-dom";
 
 
 const Blog = () => {
@@ -78,7 +78,10 @@ const BlogItem = (props) => {
         <div style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column", marginBottom: "100px"}}>
             <img src={props.src} alt="hello"/>
             <h5 style={{marginTop: "25px"}}>{props.name}</h5>
-            <p>{props.link} {">"} </p>
+            <Link to="/blog"  style={{color:"black"}}>
+                <p>{props.link} {">"} </p>
+            </Link>
+            
         </div>
     )
 }
