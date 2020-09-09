@@ -62,7 +62,8 @@ export default function (state=inittialCart, action){
             }
             return [...state];
         case CLEAR:
-            return state;
+            state=[]
+            return [...state];
         case DELETE:
             for(let i=0; i<state.length; i++){
                 if(state[i].key === action.value){

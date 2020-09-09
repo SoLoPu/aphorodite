@@ -43,11 +43,12 @@ const PaymentInfo = (props) => {
                 
             </div>
             <div className="btn-checkout-wrapper">
-                <button className="cart-checkout-button" onClick={()=>alert("Thành công")}>Thanh toán</button>
+                <button className="cart-checkout-button" onClick={()=>props.comfirmPayment()} hidden={props.isHidden}>Thanh toán</button>
             </div>
 
-            
-           
+            <div className="btn-checkout-wrapper">
+                <button className="cart-checkout-button" onClick={()=>props.comfirmPaymentDone()} hidden={!props.isHidden}>Hoàn thành</button>
+            </div>
        </div>
     )
 }
